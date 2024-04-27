@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Recruitment Management System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      .container {
+        text-align: center;
+        margin-top: 100px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: auto;
+      }
+      .btn-container {
+        display: inline-block;
+        width: 200px;
+        height: 180px;
+        border: 0.25rem solid #ababaa;
+        padding-top: 60px;
+        align-content: center;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+      .btn-gap {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <div class="btn-container">
+          <button class="btn"><a href="http://127.0.0.1:8000/admin">Admin</a></button>
+          <div class="btn-gap"></div>
+          <button class="btn"> <a href="http://127.0.0.1:8000/recruiter">Recruiter</a></button>
+          <div class="btn-gap"></div>
+          <button class="btn"><a href="http://127.0.0.1:8000/home">Student</a></button>
+        </div>
+      </div>
+    </center>
+
+    <p style="text-align: center; margin-top: 20px; font-style: italic">
+      This page is for the Campus Recruitment Management System (CRM).
+    </p>
+
+    <script>
+      function redirectToAdmin() {
+        window.location.href = "admin.html"; // Change the URL to your Admin page URL
+      }
+      function redirectToRecruiter() {
+        window.location.href = "recruiterSignIn.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="background">
+           {% csrf_token %}
+        <img src="{% static 'place.jpeg'%}" alt="">
+    <div class="login">
+        <div class="main">
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+            <div>
+                Username: <input type="text" name="username" minlength=10 pattern="[0-9]+" required>
+            </div>
+            <div>
+                Password: <input type="password" name="password" minlength=8 required>
+            </div>
+            {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+            <p>if you don't have account</p><a href="http://127.0.0.1:8000/signup">sign up</a>
+        </div>
+    </form>
+    </div>
+        <div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
